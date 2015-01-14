@@ -24,6 +24,17 @@ describe 'user authentication' do
 	expect(page).to have_content('Signed out successfully')
 	end
 
+	it 'does not allow user from one subdomain to sign in on another subdomain' do
+		user2 = build(:user)
+		account2 = create(:account, owner: user2)
+
+		sign_user_in(user2, subdomain: account2.subdomain)
+		expect(page).to have_content('Signed in successfully')
+
+		sign_user_in(user2, subdomain: account.subdomain)
+		expect(page).to have_content('Invalid email or password')
+	end
+
 end
 
 def sign_user_in(user, opts={})

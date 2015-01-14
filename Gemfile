@@ -9,6 +9,8 @@ gem 'bootstrap_form'
 gem 'pundit'
 gem 'devise'
 
+gem 'apartment'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

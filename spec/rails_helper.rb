@@ -12,6 +12,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 # ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
+Capybara.app_host = 'http://example.com'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
