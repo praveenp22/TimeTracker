@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 
 gem 'haml'
 gem "haml-rails"
-gem 'bootstrap_form'
+gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap_form'
 gem 'pundit'
 gem 'devise'
-gem 'therubyracer'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -50,8 +51,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 
   gem "erb2haml"    
   gem 'html2haml'
