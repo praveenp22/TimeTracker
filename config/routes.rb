@@ -14,10 +14,11 @@ Rails.application.routes.draw do
 	constraints(SubdomainPresent) do
 		root 'projects#index', as: :subdomain_root
 		devise_for :users
+		resources :users, only: :index
 	end	 
 
 	constraints(SubdomainBlank) do
 		root 'welcome#index'
-		resources :accounts, only: [:create, :create]
+		resources :accounts, only: [:create, :new]
 	end
 end

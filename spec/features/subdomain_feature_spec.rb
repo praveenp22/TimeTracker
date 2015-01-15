@@ -4,8 +4,8 @@ require 'rails_helper'
 		let!(:account){create(:account_with_schema)}
 
 		it 'redirects invalid accounts' do
-			visit root_url(subdomain: 'random_subdomain')
-			expect(page.current_url).to_not include('random-subdomdin_randomizer_random')
+			visit root_url(subdomain: 'random-subdomdin-randomizer-random')
+			expect(page.current_url).to_not include('random-subdomdin-randomizer-random')
 		end
 
 		it 'allows valid accounts' do
@@ -15,6 +15,6 @@ require 'rails_helper'
 
 		it 'forces user to login before accessing subdomain content' do
 			visit root_url(subdomain: account.subdomain)
-			expect(page.current_url).to have_content 'sign in or sing up before continuing'
+			expect(page).to have_content 'sign in or sign up before continuing.'
 		end	
 	end

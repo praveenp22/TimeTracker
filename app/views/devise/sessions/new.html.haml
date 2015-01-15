@@ -2,7 +2,7 @@
   .col-lg-6.col-lg-offset-3
     .panel.panel-default
       .panel-heading
-        %h1.panel-title Log in
+        %h1.panel-title Sign In
       .panel-body
         %div.form-group.input-group
           = f.email_field_without_bootstrap :email, autofocus: true, placeholder: "Email", class: "form-control"
@@ -15,7 +15,7 @@
         - if devise_mapping.rememberable?
           %div
             = f.check_box :remember_me
-        %div= f.submit "Log in"
+        %div= f.submit "Sign In", class: 'btn btn-primary btn-block'
         %br
         = custom_flash
         = render "devise/shared/links"

@@ -1,9 +1,9 @@
 FactoryGirl.define do
-	sequence(:subdomain) { |n| "subdomain#{n}"}
+	sequence(:subdomain) { |n| "subdomain"}
 	
 	factory :account do
 		sequence(:subdomain) { |n| "subdomain#{n}"}
-		association :owner, factory: :user
+		association :owner, factory: :user, strategy: :build
 
 
 		factory :account_with_schema do
