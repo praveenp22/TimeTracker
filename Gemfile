@@ -8,6 +8,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'pundit'
 gem 'devise'
+gem 'devise_invitable'
 
 gem 'apartment'
 
@@ -48,7 +49,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'guard'
-  gem 'guard-livereload'
+
   gem 'guard-rspec'
   gem 'rspec-rails'
   gem 'capybara'
@@ -56,8 +57,16 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 
-  gem "erb2haml"    
+  gem 'letter_opener'
+  gem 'email_spec'
+
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+  gem 'rb-fsevent'
+
+  gem 'erb2haml'    
   gem 'html2haml'
+
 
 end
 

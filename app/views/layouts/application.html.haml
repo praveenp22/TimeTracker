@@ -18,7 +18,7 @@
     = javascript_include_tag "application"
 
 
-  %body
+  %body 
     .navbar.navbar-default.navbar-static-top
       .container
         %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
@@ -36,11 +36,12 @@
             -if user_signed_in?
               -# %li= link_to current_user.email, edit_user_registration_path
               %li= link_to "Users", users_path
-              %li= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-default navbar-btn'
+              %li 
+                %button.btn.btn-default.navbar-btn #{link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'no-text-decorations'}
             -else
               -# %li= link_to "Sign Up", new_user_registration_path
-              %li= link_to "Sign In", new_user_session_path
-  
+              %button.btn.btn-default.navbar-btn #{link_to "Sign In",  new_user_session_path, class: 'no-text-decorations'}
+ 
 
     .container
       .row

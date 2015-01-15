@@ -19,10 +19,14 @@ def sign_user_in(user, opts={})
 	else
 		visit new_user_session_path
 	end
-		
+	
 	fill_in 'Email', with: user.email
 	fill_in 'Password', with: (opts[:password] || user.password)
-	click_button 'Log in'
+	
+	within(:css, ".panel") do
+			click_button 'Sign In'
+	end
+
 end	
 
 def set_subdomain(subdomain)
