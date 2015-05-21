@@ -1,0 +1,12 @@
+.h2 Create An Account
+= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f|
+	.col-md-6.col-md-offset-3
+		.panel.panel-default
+			.panel-body
+				= f.hidden_field :invitation_token
+				= f.text_field :name
+				= f.password_field :password
+				= f.password_field :password_confirmation
+				= f.submit "Create Account",class: 'btn btn-primary btn-block'
+
+

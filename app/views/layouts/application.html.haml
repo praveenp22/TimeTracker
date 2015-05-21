@@ -40,7 +40,8 @@
                 %button.btn.btn-default.navbar-btn #{link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'no-text-decorations'}
             -else
               -# %li= link_to "Sign Up", new_user_registration_path
-              %button.btn.btn-default.navbar-btn #{link_to "Sign In",  new_user_session_path, class: 'no-text-decorations'}
+              -if request.subdomain.present?
+                %button.btn.btn-default.navbar-btn #{link_to "Sign In",  new_user_session_path, class: 'no-text-decorations'} 
  
 
     .container

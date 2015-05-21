@@ -4,13 +4,17 @@ source 'https://rubygems.org'
 gem 'haml'
 gem "haml-rails"
 gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'pundit'
 gem 'devise'
 gem 'devise_invitable'
 
 gem 'apartment'
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'twitter-bootstrap-rails'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

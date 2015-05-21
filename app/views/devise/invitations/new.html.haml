@@ -1,0 +1,8 @@
+.h2 Send Invitation
+= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :post } do |f|
+	.col-md-6.col-md-offset-3
+		.panel.panel-default
+			.panel-body
+				= f.text_field :email
+				= f.submit "Create Account",class: 'btn btn-primary btn-block'
+

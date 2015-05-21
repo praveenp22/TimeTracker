@@ -10,10 +10,12 @@
 						%th Email
 						%th Status
 				%tbody
-					%tr
-						- @users.each do |user|
+					- @invited_users.each do |user|
+						%tr
 							%td #{user.name}
 							%td #{user.email}
 							%td #{user_status(user)}
-
-							
+			.h2 Invite User
+			= bootstrap_form_for(User.new, url: user_invitation_path, html: {class: 'form-inline'})	do |f|
+				= f.email_field :email, placeholder: "Email", hide_label: true
+				= f.primary "Invite User"
